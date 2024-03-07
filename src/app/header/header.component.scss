@@ -1,0 +1,47 @@
+@import './../../styles.scss';
+
+section {
+    background-color: $atf_bg !important;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name {
+    font-size: 48px;
+    font-weight: 800;
+    color: white;
+
+    .dot {
+        background: linear-gradient(to top, white 60%, $purple_blue 40%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .arch {
+        background: linear-gradient(to right, white 50%, $aqua_blue 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.links {
+    display: flex;
+    gap: 16px;
+
+    a{
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    }
+}
+
+
+
