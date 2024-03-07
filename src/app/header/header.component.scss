@@ -1,20 +1,25 @@
 @import './../../styles.scss';
 
 section {
+    position: fixed;
+    width: 100vw;  
     background-color: $atf_bg !important;
+}
+
+.header-container {
+    display: flex;
+    height: 124px;
     padding-left: 80px;
     padding-right: 80px;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
     justify-content: space-between;
 }
 
 .name {
-    font-size: 48px;
-    font-weight: 800;
+    font-size: 40px;
+    font-weight: 600;
     color: white;
 
     .dot {
@@ -30,6 +35,10 @@ section {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+    :hover {
+        cursor: pointer;
+    }
 }
 
 .links {
@@ -38,6 +47,7 @@ section {
 
     a{
     font-size: 32px;
+    font-weight: 200;
     color: white;
     text-decoration: none;
     }
