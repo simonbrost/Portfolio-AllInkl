@@ -1,7 +1,7 @@
 @import './../../styles.scss';
 
 .footer {
-    height: 25vh;
+    height: 20vh;
     width: 100vw;
     background-color: $atf-bg;
     color: white;
@@ -9,20 +9,50 @@
     justify-content: space-between;
     align-items: center;
     border-top: 0.3rem solid $aqua-blue;
+}
 
-    .footer-left {
-        display: flex;
-        flex-direction: column;
-        padding-left: 8rem;
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    padding-left: 8rem;
+
+    .name {
+        font-size: 3.5rem;
+        font-weight: 600;
+        color: white;
+
+        .dot {
+            background: linear-gradient(to top, white 60%, $purple_blue 40%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .arch {
+            background: linear-gradient(to right, white 50%, $aqua_blue 50%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        :hover {
+            cursor: pointer;
+        }
     }
 
-    .footer-middle {
-        display: flex;
+    a {
+        text-decoration: none;
+        color: white;
     }
+}
 
-    .footer-right {
-        display: flex;
-        gap: 3rem;
-        padding-right: 8rem;
-    }
+.footer-middle {
+    display: flex;
+    font-size: 1.5rem;
+}
+
+.footer-right {
+    display: flex;
+    gap: 3rem;
+    padding-right: 8rem;
 }

@@ -1,0 +1,71 @@
+@import './../../styles.scss';
+
+.contact-section {
+    height: 70vh;
+    width: 100vw;
+    background-color: $atf-bg;
+    color: white;
+    padding-left: 6rem;
+
+    h1 {
+        font-size: 7rem;
+        font-weight: 600;
+        margin-bottom: 5rem;
+    }
+}
+.contact-section-container {
+    display: flex;
+    gap: 10rem;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    gap: 1rem;
+
+    a {
+        color: white;
+        font-weight: 800;
+        text-decoration: none;
+    }
+}
+
+.form-control::placeholder {
+    color: red($color: white) !important;
+}
+
+.form-control {
+    background-color: $atf-bg;
+    border-color: $purple_blue;
+}
+
+.form-check-input {
+    background-color: $atf-bg;
+    border-color: $aqua_blue;
+}
+
+.offset-sm-2 {
+    margin-left: 0 !important;
+}
+
+.form-check-label {
+    a {
+        color: $purple_blue;
+        text-decoration: none;
+    }
+}
+
+.btn {
+    background-color: $aqua_blue;
+    border: none;
+    font-size: 1.5rem;
+    width: 16rem;
+    height: 4rem;
+}
+
+.to-the-top {
+    position: relative;
+    bottom: -15rem;
+    right: -90rem;
+}
