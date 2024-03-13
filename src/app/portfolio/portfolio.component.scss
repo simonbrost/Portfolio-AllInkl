@@ -1,0 +1,13 @@
+@import './../../styles.scss';
+
+.portfolio-section {
+    width: 100vw;
+    background-color: $atf-bg;
+    color: white;
+    
+    h1 {
+        font-size: 7rem;
+        font-weight: 600;
+        margin: 0;
+    }
+}

@@ -8,6 +8,7 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProjectComponent } from './project/project.component';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { FooterComponent } from './footer/footer.component';
     AboveTheFoldComponent, 
     AboutMeComponent, 
     MySkillsComponent, 
-    PortfolioComponent, 
+    PortfolioComponent,
+    ProjectComponent, 
     ContactComponent, 
     FooterComponent
   ],
