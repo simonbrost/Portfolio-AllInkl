@@ -1,0 +1,28 @@
+@import './../../styles.scss';
+
+.footer {
+    height: 25vh;
+    width: 100vw;
+    background-color: $atf-bg;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 0.3rem solid $aqua-blue;
+
+    .footer-left {
+        display: flex;
+        flex-direction: column;
+        padding-left: 8rem;
+    }
+
+    .footer-middle {
+        display: flex;
+    }
+
+    .footer-right {
+        display: flex;
+        gap: 3rem;
+        padding-right: 8rem;
+    }
+}
