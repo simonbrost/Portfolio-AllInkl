@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: $atf_bg;
+    background-color: $bg;
 
 }
 
@@ -16,8 +16,6 @@
     flex-direction: column;
 
     h1 {
-        font-size: 7rem;
-        font-weight: 600;
         margin: 0;
     }
 

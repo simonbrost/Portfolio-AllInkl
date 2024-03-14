@@ -3,13 +3,11 @@
 .contact-section {
     height: 70vh;
     width: 100vw;
-    background-color: $atf-bg;
+    background-color: $bg;
     color: white;
     padding-left: 6rem;
 
     h1 {
-        font-size: 7rem;
-        font-weight: 600;
         margin-bottom: 5rem;
     }
 }
@@ -36,12 +34,12 @@
 }
 
 .form-control {
-    background-color: $atf-bg;
+    background-color: $bg;
     border-color: $purple_blue;
 }
 
 .form-check-input {
-    background-color: $atf-bg;
+    background-color: $bg;
     border-color: $aqua_blue;
 }
 

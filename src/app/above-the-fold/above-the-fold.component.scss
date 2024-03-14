@@ -1,101 +1,148 @@
 @import './../../styles.scss';
 
 .atf-section {
-    padding-top: 124px;
+    padding-top: 20rem;
     height: 100vh;
-    background-color: $atf_bg;
-    background-image: url(../../assets/img/bg/Vector.png);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-color: $bg;
+    // background-image: url(../../assets/img/bg/Vector.png);
+    // background-position: bottom;
+    // background-repeat: no-repeat;
+    // background-size: contain;
     display: flex;
+    justify-content: center;
 }
 
-.atf-img {
-    // .atf-img-bg{
-    // }
+//-------------------- left-side-------------------------
+.atf-section-container-left {
 
-    .atf-img-photo {
-        position: absolute;
-        width: 520px;
-        left: 100px;
+    .atf-img {
+
+        .atf-img-colors {
+            position: absolute;
+            z-index: 1;
+            left: -5rem;
+        }
+
+        .atf-img-vector {
+            position: absolute;
+            left: 0;
+            z-index: 3;
+            margin-top: 14rem;
+        }
+
+        .atf-img-photo {
+            position: absolute;
+            z-index: 2;
+            top: 17rem;
+            width: 520px;
+            left: 100px;
+        }
+    }
+
+    .atf-links {
+        position: relative;
+        top: 48rem;
+        z-index: 4;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 40vw;
+
+        .purple-line {
+            height: 5px;
+            border-right: 100px solid $purple_blue;
+            border-radius: 5px;
+        }
+
+        a {
+            text-decoration: 0;
+            font-size: 1.8rem;
+            color: white;
+        }
     }
 }
 
-.atf-headlines {
+//-------------------- right-side-------------------------
+
+.atf-section-container-right {
+    position: relative;
+    z-index: 4;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 20vh;
 
-}
+    .atf-headlines {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 25vh;
+    }
 
-.atf-headlines-vertical {
-    
-    h2 {
+    .atf-headlines-vertical {
+
+        h2 {
+            writing-mode: vertical-lr;
+            text-orientation: sideways;
+            color: white;
+            transform: rotateZ(180deg);
+            font-size: 4rem;
+            font-weight: 600;
+        }
+    }
+
+    .atf-headlines-horizontal {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+
+        .headline-white {
+            height: 50%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .headline-blue {
+            font-size: 3rem;
+            font-weight: 600;
+            height: 50%;
+            color: $purple_blue;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    button {
+        background-color: $aqua_blue;
+        color: white;
+        font-size: 1.5rem;
+        width: 16rem;
+        height: 4rem;
+        border-radius: 5%/20%;
+        border: none;
+        
+        transition: transform 1000ms;
+
+        &:hover {
+            transform: translateY(-1.75rem);
+            transition: transform 250ms;
+            background-color: $purple_blue; // Hier wird die Farbe geändert, wenn über das Element gehovert wird
+        }
+    }
+
+    .atf-scroll {
         writing-mode: vertical-lr;
         text-orientation: sideways;
         color: white;
-        transform: rotateZ(180deg);
-        font-size: 4rem;
-        font-weight: 400;
-    }
-}
+        font-size: 1.8rem;
+        font-weight: 200;
+        margin-left: 40rem;
+        margin-top: 10rem;
 
-.atf-headlines-horizontal {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-
-    .headline-white {
-        font-size: 5rem;
-        font-weight: 800;
-        height: 50%;
-        color: white;
-        overflow: hidden; 
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        animation: bounce 0.8s ease-in-out infinite alternate;
     }
 
-    .headline-blue {
-        font-size: 3rem;
-        font-weight: 600;
-        height: 50%;
-        color: $purple_blue;
-        overflow: hidden; 
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-}
-
-button {
-    height: 50px;
-}
-
-.atf-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 40vw;
-
-    .purple-line {
-        height: 5px;
-        border-right: 100px solid $purple_blue;
-        border-radius: 5px;
-    }
-    a {
-        text-decoration: 0;
-        font-size: 1.5rem;
-        color: white;
-    }
-}
-
-.atf-scroll {
-    writing-mode: vertical-lr;
-    text-orientation: sideways;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 200;
 }

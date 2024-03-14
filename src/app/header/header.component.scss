@@ -3,7 +3,8 @@
 section {
     position: fixed;
     width: 100vw;  
-    background-color: $atf_bg !important;
+    background-color: $bg;
+    z-index: 999;
 }
 
 .header-container {
@@ -21,6 +22,7 @@ section {
     font-size: 3rem;
     font-weight: 600;
     color: white;
+    cursor: pointer;
 
     .dot {
         background: linear-gradient(to top, white 60%, $purple_blue 40%);
@@ -36,20 +38,26 @@ section {
         -webkit-text-fill-color: transparent;
     }
 
-    :hover {
+    &:hover {
         cursor: pointer;
+        animation: grow 0.5s ease forwards;
     }
 }
 
 .links {
     display: flex;
-    gap: 16px;
+    gap: 3rem;
 
     a{
-    font-size: 32px;
+    font-size: 1.8rem;
     font-weight: 200;
     color: white;
     text-decoration: none;
+    transition: color 0.5s ease;
+
+    &:hover {
+        color: $aqua_blue;
+    }
     }
 }
 

@@ -3,7 +3,7 @@
 .my-skills-section {
     width: 100vw;
     height: 100vh;
-    background-color: $atf_bg;
+    background-color: $bg;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,8 +40,6 @@
     padding-left: 5rem;
 
     h1 {
-        font-size: 7rem;
-        font-weight: 600;
         margin: 0;
     }
 
@@ -58,5 +56,13 @@
         height: 4rem;
         border-radius: 5%/20%;
         border: none;
+
+        transition: transform 1000ms;
+
+        &:hover {
+            transform: translateY(-1.75rem);
+            transition: transform 250ms;
+            background-color: $purple_blue; // Hier wird die Farbe geändert, wenn über das Element gehovert wird
+        }
     }
 }
