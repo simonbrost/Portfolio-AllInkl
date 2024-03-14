@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     color: white;
+    cursor: default;
 }
 
 .my-skills-left {
@@ -28,25 +29,11 @@
         font-weight: 600;
 
         img {
-            animation: rotate 0.5s infinite linear paused;
-
-            @keyframes rotate {
-                to {
-                    transform: rotate(360deg);
-                }
-            }
+            transition: transform 0.9s ease;
 
             &:hover {
-                animation-play-state: running;
+                transform: rotate(360deg);
             }
-        }
-        img {
-            rotate: 0deg;
-            transition: rotate 3s cubic-bezier(0.5, 1, 1, 1);
-        }
-    
-        img:hover {
-            rotate: -720deg;
         }
     }
 
