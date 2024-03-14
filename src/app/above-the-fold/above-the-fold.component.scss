@@ -54,10 +54,23 @@
             border-radius: 5px;
         }
 
+        img {
+            &:hover {
+                cursor: pointer;
+                animation: grow 0.2s ease forwards;
+            }
+        }
+
         a {
             text-decoration: 0;
             font-size: 1.8rem;
             color: white;
+
+            transition: color 0.5s ease;
+            
+            &:hover {
+                color: $aqua_blue;
+            }
         }
     }
 }

@@ -26,7 +26,31 @@
         gap: 0.5rem;
         align-items: center;
         font-weight: 600;
+
+        img {
+            animation: rotate 0.5s infinite linear paused;
+
+            @keyframes rotate {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            &:hover {
+                animation-play-state: running;
+            }
+        }
+        img {
+            rotate: 0deg;
+            transition: rotate 3s cubic-bezier(0.5, 1, 1, 1);
+        }
+    
+        img:hover {
+            rotate: -720deg;
+        }
     }
+
+
 }
 
 .my-skills-right {
