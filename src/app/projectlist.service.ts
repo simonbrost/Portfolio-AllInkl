@@ -12,19 +12,25 @@ export class ProjectlistService {
       name: "Join",
       tools: "JavaScript|HTML|CSS",
       description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-      img: "join.png"
+      img: "join.png",
+      github: "https://github.com/simonbrost/JOIN",
+      demo: "",
     },
     {
       name: "El Pollo Loco",
       tools: "JavaScript|HTML|CSS",
       description: "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the killer chicken.",
-      img: "polloloco.png"
+      img: "polloloco.png",
+      github: "https://github.com/simonbrost/El-Pollo-Loco",
+      demo: "https://simon-brost.developerakademie.net/elPolloLoco/index.html",
     },
     {
       name: "Pokedex",
       tools: "Angular|TypeScript|SCSS",
       description: "My Approach to the famous Pokedex. Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
-      img: "pokedex.png"
+      img: "pokedex.png",
+      github: "https://github.com/simonbrost/angular-pokedex",
+      demo: "",
     }
   ]
 }

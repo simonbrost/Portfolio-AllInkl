@@ -18,9 +18,13 @@
     padding-left: 8rem;
 
     .name {
-        font-size: 3.5rem;
-        font-weight: 600;
-        color: white;
+
+        a {
+            text-decoration: none;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: white;
+        }
 
         .dot {
             background: linear-gradient(to top, white 60%, $purple_blue 40%);

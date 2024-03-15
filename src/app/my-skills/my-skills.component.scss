@@ -46,17 +46,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     gap: 2rem;
-    padding-right: 5rem;
-    padding-left: 5rem;
 
     h1 {
         margin: 0;
     }
 
     div {
-        padding-left: 6rem;
-        padding-right: 6rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     button {

@@ -24,6 +24,11 @@ section {
     color: white;
     cursor: pointer;
 
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
     .dot {
         background: linear-gradient(to top, white 60%, $purple_blue 40%);
         background-clip: text;
