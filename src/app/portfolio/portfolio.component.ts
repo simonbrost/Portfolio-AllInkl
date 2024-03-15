@@ -14,4 +14,8 @@ export class PortfolioComponent {
 
 projectdata = inject(ProjectlistService)
 
+isOdd(num: number): boolean {
+  return num % 2 !== 0;
+}
+
 }

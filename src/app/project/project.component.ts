@@ -9,6 +9,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
+  @Input() reverse: boolean | undefined;
   @Input() project =
     {
       name: "Join",
