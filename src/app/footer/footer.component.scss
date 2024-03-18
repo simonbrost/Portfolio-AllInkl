@@ -75,3 +75,12 @@
         }
     }
 }
+
+.bg-six{
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    left: -550px;
+    top: 6150px;
+    transform: rotate(250deg);
+}

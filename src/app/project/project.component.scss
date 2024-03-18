@@ -15,6 +15,7 @@
 }
 
 .img-container {
+    z-index: 2;
     max-width: 40vw;
     padding-left: 5rem;
     padding-right: 5rem;
@@ -31,6 +32,7 @@
 }
 
 .info-container {
+    z-index: 2;
     max-width: 40vw;
     padding-left: 5rem;
     padding-right: 5rem;

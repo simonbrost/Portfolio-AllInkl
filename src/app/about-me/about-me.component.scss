@@ -1,17 +1,18 @@
 @import './../../styles.scss';
 
 .about-me-section {
+    padding-left: 5vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10vw;
     color: white;
     background-color: $bg;
     cursor: default;
 }
 
 .about-me-left {
-    width: 45vw;
     display: flex;
     flex-direction: column;
 
@@ -37,10 +38,10 @@
 }
 
 .about-me-right {
-    width: 45vw;
     display: flex;
     justify-content: center;
     align-items: center;
+
     img {
         border: 0.3rem solid $aqua_blue;
         border-radius: 50%;
@@ -53,4 +54,10 @@
             to {scale: 1; opacity: 1;}
         }
     }
+
+    .about-me-line {
+        width: 10vw;
+        height: 0;
+        border-top: 0.3rem solid $aqua_blue;
+      }
 }

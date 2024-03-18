@@ -10,4 +10,19 @@
     h1 {
         margin-bottom: 5rem;
     }
+
+    .bg-four{
+        position: absolute;
+        z-index: 1;
+        top: 4100px;
+        left: -100px;
+    }
+
+    .bg-five{
+        position: absolute;
+        z-index: 1;
+        top: 5250px;
+        right: -500px;
+        transform: rotate(70deg);
+    }
 }

@@ -1,10 +1,16 @@
-$atf_bg: #141D2F;
-$bg: #1D273C;
+$bg: #141D2F;
+// $bg: #1D273C;
 $purple_blue: #4B47FF;
 $aqua_blue: #00BEE8;
 $hover: #1CE6B5;
 $error: #E61C40;
 $done: #70E61C;
+
+.section-headline {
+  font-size: 7rem;
+  font-weight: 600;
+  color: white;
+}
 
 body {
   margin: 0;
@@ -58,4 +64,27 @@ body::-webkit-scrollbar {
 
 .fontPoppins {
   font-family: 'Poppins';
+}
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+
+// ----------------- ANIMATIONS & TRANSITIONS ----------------------------
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(30px);
+  }
 }
