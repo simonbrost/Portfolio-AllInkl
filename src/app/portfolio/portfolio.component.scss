@@ -6,19 +6,47 @@
     background-color: $bg;
     color: white;
     cursor: default;
-    
-    h1 {
-        margin-bottom: 5rem;
+
+    .headlines-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            &::before {
+                position: absolute;
+                content: '';
+                border-top: 0.3rem solid $purple_blue;
+                width: 6vw;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                margin-right: 40rem;
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                border-top: 0.3rem solid $purple_blue;
+                width: calc(50vw - 256px);
+                right: 0;
+                
+            }
+        }
     }
 
-    .bg-four{
+    .bg-four {
         position: absolute;
         z-index: 1;
         top: 4100px;
         left: -100px;
     }
 
-    .bg-five{
+    .bg-five {
         position: absolute;
         z-index: 1;
         top: 5250px;
