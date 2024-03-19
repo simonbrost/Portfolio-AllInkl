@@ -11,20 +11,27 @@
             </div>
         </div>
         <div class="form-box">
-            <form>
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="row mb-3">
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3" placeholder="Your name">
+                        <input [(ngModel)]="contactData.name" type="text" name="name" 
+                        class="form-control" id="inputName3" placeholder="Your name" required>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword3" placeholder="Your email">
+                        <input [(ngModel)]="contactData.email" type="email" name="email" 
+                        class="form-control" id="inputEmail3" placeholder="Your email" 
+                        required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                     </div>
                 </div>
                 <div class="mb-3">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                        placeholder="Your message"></textarea>
+                    <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" 
+                    class="form-control" id="exampleFormControlTextarea1" rows="8"
+                    placeholder="Your message" required></textarea>
+                    @if (!message.valid && message.touched && !message.disabled) {
+                        <span>*Please enter a message!</span>
+                    }
                 </div>
                 <div class="row mb-3">
                     <div class="col-sm-10 offset-sm-2">

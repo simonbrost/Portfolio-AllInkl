@@ -49,6 +49,7 @@ form {
 .form-control {
     background-color: $bg;
     border-color: $purple_blue;
+    color: white;
     cursor: pointer;
 
     &::placeholder {
