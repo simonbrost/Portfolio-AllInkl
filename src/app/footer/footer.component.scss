@@ -2,7 +2,7 @@
 
 .footer {
     font-family: 'Poppins';
-    height: 20vh;
+    height: 25vh;
     width: 100vw;
     background-color: $bg;
     color: white;
@@ -75,13 +75,4 @@
             animation: grow 0.2s ease forwards;
         }
     }
-}
-
-.bg-six{
-    position: absolute;
-    z-index: 1;
-    overflow: hidden;
-    left: -550px;
-    top: 6150px;
-    transform: rotate(250deg);
 }

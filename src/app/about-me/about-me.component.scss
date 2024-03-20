@@ -5,7 +5,7 @@
     padding-left: 5vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 10vw;
     color: white;
@@ -16,6 +16,7 @@
 .about-me-left {
     display: flex;
     flex-direction: column;
+    margin-right: max(10vw, 10%);
 
     h1 {
         margin: 0;
@@ -23,6 +24,7 @@
 
     span {
         padding-right: 3rem;
+        max-width: 650px;
     }
 
     .text-block {
@@ -31,6 +33,7 @@
         align-items: center;
         gap: 3rem;
         margin: 3rem;
+        max-width: 600px;
 
         .add-width {
             margin-right: 10px;
@@ -42,6 +45,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: max(10vw, 10%);
+    
+    &::after {
+        position: absolute;
+        content: '';
+        border-top: 0.3rem solid $aqua_blue;
+        width: max(10vw, 10%);
+        right: 0;
+    }
 
     img {
         border: 0.3rem solid $aqua_blue;
@@ -55,10 +67,4 @@
             to {scale: 1; opacity: 1;}
         }
     }
-
-    .about-me-line {
-        width: 10vw;
-        height: 0;
-        border-top: 0.3rem solid $aqua_blue;
-      }
 }

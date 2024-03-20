@@ -27,7 +27,7 @@
                 </div>
                 <div class="mb-3">
                     <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" 
-                    class="form-control" id="exampleFormControlTextarea1" rows="8"
+                    class="form-control" id="exampleFormControlTextarea1" rows="5"
                     placeholder="Your message" required></textarea>
                     @if (!message.valid && message.touched && !message.disabled) {
                         <span>*Please enter a message!</span>
@@ -51,4 +51,5 @@
     <a href="#atf">
         <img class="to-the-top" src="../../assets/img/general-icons/arrow-white.png" alt="up">
     </a>
+    <img class="bg-six" src="../../assets/img/bg/purple_shadow_three.png">
 </section>
