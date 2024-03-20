@@ -112,8 +112,8 @@ form {
 
 .to-the-top {
     position: relative;
-    bottom: 0;
-    right: -100rem;
+    bottom: -5vh;
+    left: 95vw;
     cursor: pointer;
 
     animation: bounce 0.8s ease-in-out infinite alternate;
@@ -121,8 +121,7 @@ form {
 
 .bg-six{
     position: absolute;
-    overflow: hidden;
-    left: -550px;
-    top: 5500px;
-    transform: rotate(250deg);
+    left: -400px;
+    top: 510vh;
+    transform: rotate(260deg);
 }

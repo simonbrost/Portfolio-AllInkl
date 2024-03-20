@@ -11,6 +11,8 @@
     align-items: center;
     border-top: 0.3rem solid $aqua-blue;
     cursor: default;
+    position: relative; /* Position für Z-Index */
+    z-index: 1; /* Auf oberster Ebene */
 }
 
 .footer-left {
