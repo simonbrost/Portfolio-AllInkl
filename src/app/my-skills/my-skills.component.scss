@@ -4,6 +4,8 @@
     font-family: 'Poppins';
     width: 100vw;
     height: 100vh;
+    padding-left: 100px;
+    padding-right: 100px;
     background-color: $bg;
     display: flex;
     justify-content: center;
@@ -20,7 +22,7 @@
     justify-content: center;
     gap: 8rem;
     padding-right: 5rem;
-    padding-left: 5rem;
+    
 
     div {
         display: flex;
@@ -49,7 +51,7 @@
     align-items: flex-end;
     text-align: end;
     gap: 2rem;
-    padding-right: 8rem;
+    
 
     h1 {
         display: flex;

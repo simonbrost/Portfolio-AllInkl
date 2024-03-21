@@ -2,7 +2,9 @@
 
 .atf-section {
     font-family: 'Poppins';
-    padding-top: 20rem;
+    padding-top: 124px;
+    padding-left: 100px;
+    padding-right: 100px;
     height: 100vh;
     background-color: $bg;
     display: flex;
@@ -23,17 +25,17 @@
 
         .atf-img-vector {
             position: absolute;
-            height: 70vh;
             width: 100vw;
             left: 0;
             z-index: 3;
-            margin-top: 14rem;
+            height: 40vh;
+            margin-top: 50vh;
         }
 
         .atf-img-photo {
             position: absolute;
             z-index: 2;
-            top: 17rem;
+            top: 10rem;
             width: 520px;
             left: 100px;
         }
@@ -41,7 +43,7 @@
 
     .atf-links {
         position: absolute;
-        top: 60rem;
+        top: 50rem;
         z-index: 4;
         display: flex;
         justify-content: space-between;
@@ -96,6 +98,8 @@
     align-items: center;
 
     .atf-headlines {
+        padding-top: 10vh;
+        
         display: flex;
         align-items: center;
         justify-content: center;
@@ -142,6 +146,7 @@
         height: 4rem;
         border-radius: 5%/20%;
         border: none;
+        margin-top: 2rem;
         
         transition: transform 1000ms;
 
@@ -159,7 +164,7 @@
         font-size: 1.8rem;
         font-weight: 200;
         margin-left: 40rem;
-        margin-top: 10rem;
+        margin-top: 8rem;
         cursor: default;
 
         animation: bounce 0.8s ease-in-out infinite alternate;

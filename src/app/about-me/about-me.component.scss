@@ -2,12 +2,14 @@
 
 .about-me-section {
     font-family: 'Poppins';
-    padding-left: 5vw;
+    padding-top: 124px;
+    padding-left: 100px;
+    padding-right: 100px;
     height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10vw;
+    gap: 8vw;
     color: white;
     background-color: $bg;
     cursor: default;
@@ -19,7 +21,7 @@
     margin-right: max(10vw, 10%);
 
     h1 {
-        margin: 0;
+        margin-bottom: 2rem;
     }
 
     span {
