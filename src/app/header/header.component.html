@@ -1,4 +1,6 @@
-<section>
+<!------------------------ desktop-header --------------------------------->
+
+<section id="desktop-header">
     <div class="header-container">
         <div class="name">
             <a href="#atf">S<span class="dot">i</span>mo<span class="arch">n</span></a>
@@ -11,4 +13,28 @@
         </div>
     </div>
     <div class="scroll-watcher"></div>
+</section>
+
+<!------------------------ mobile-header --------------------------------->
+
+<section id="mobile-header">
+    <div class="m-header-container">
+        <div class="m-name">
+            <a href="#atf">S<span class="dot">i</span>mo<span class="arch">n</span></a>
+        </div>
+        <div class="m-links">
+            <button class="burger-menu" (click)="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="m-links-menu" [ngClass]="{ 'show-menu': isMenuOpen }">
+                <a href="#about">About me</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </div>
+    <div class="m-scroll-watcher"></div>
 </section>

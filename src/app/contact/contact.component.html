@@ -14,15 +14,21 @@
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="row mb-3">
                     <div class="col-sm-10">
-                        <input [(ngModel)]="contactData.name" type="text" name="name" 
-                        class="form-control" id="inputName3" placeholder="Your name" required>
+                        <input ngClass="{'warningColor': !name.valid && name.touched}" #name="ngModel" minlength="4" [(ngModel)]="contactData.name" type="text" name="name" 
+                        class="form-control" id="inputName3" placeholder="Your name" required >
+                        @if (!name.valid && name.touched) {
+                            <span class="notification">Your name is required</span>
+                        }
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-sm-10">
-                        <input [(ngModel)]="contactData.email" type="email" name="email" 
+                        <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" 
                         class="form-control" id="inputEmail3" placeholder="Your email" 
                         required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                        @if (!email.valid && email.touched) {
+                            <span class="notification">Your email is required</span>
+                        }
                     </div>
                 </div>
                 <div class="mb-3">
@@ -30,7 +36,7 @@
                     class="form-control" id="exampleFormControlTextarea1" rows="5"
                     placeholder="Your message" required></textarea>
                     @if (!message.valid && message.touched && !message.disabled) {
-                        <span>*Please enter a message!</span>
+                        <span class="notification">Your message is empty</span>
                     }
                 </div>
                 <div class="row mb-3">
