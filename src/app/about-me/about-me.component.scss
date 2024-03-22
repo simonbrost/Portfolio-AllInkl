@@ -5,11 +5,9 @@
     padding-top: 124px;
     padding-left: 100px;
     padding-right: 100px;
-    height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 8vw;
     color: white;
     background-color: $bg;
     cursor: default;
@@ -25,7 +23,6 @@
     }
 
     span {
-        padding-right: 3rem;
         max-width: 650px;
     }
 
@@ -47,13 +44,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: max(10vw, 10%);
     
     &::after {
         position: absolute;
         content: '';
         border-top: 0.3rem solid $aqua_blue;
-        width: max(10vw, 10%);
+        width: 10vw;
         right: 0;
     }
 

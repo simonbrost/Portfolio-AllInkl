@@ -2,8 +2,10 @@
 
 .footer {
     font-family: 'Poppins';
-    height: 20vh;
+    height: 25vh;
     width: 100vw;
+    padding-left: 100px;
+    padding-right: 100px;
     background-color: $bg;
     color: white;
     display: flex;
@@ -18,7 +20,6 @@
 .footer-left {
     display: flex;
     flex-direction: column;
-    padding-left: 8rem;
 
     .name {
 
@@ -69,7 +70,6 @@
 .footer-right {
     display: flex;
     gap: 3rem;
-    padding-right: 8rem;
 
     img {
         &:hover {

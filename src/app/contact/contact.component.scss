@@ -5,14 +5,13 @@
     padding-top: 124px;
     padding-left: 100px;
     padding-right: 100px;
-    height: 80vh;
-    width: 100vw;
+    padding-bottom: 200px;
     background-color: $bg;
     color: white;
     cursor: default;
 
     h1 {
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
         display: flex;
         align-items: center;
         text-align: center;
@@ -31,13 +30,13 @@
 
 .contact-section-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .text-box {
     display: flex;
     flex-direction: column;
-    width: 40vw;
+    max-width: 650px;
     gap: 1rem;
 }
 
@@ -95,10 +94,15 @@ form {
     }
 }
 
-.btns-container {
+.msg-btn-container {
   display: flex;
-  justify-content: space-between;  
+  justify-content: center;  
 }
+
+.to-the-top-container {
+    display: flex;
+    justify-content: flex-end;  
+  }
 
 .btn {
     background-color: $aqua_blue;
@@ -124,8 +128,8 @@ form {
 .bg-six{
     position: absolute;
     overflow: hidden;
-    left: -400px;
-    top: 550vh;
+    left: -280px;
+    top: 480vh;
     transform: rotate(260deg);
 }
 
