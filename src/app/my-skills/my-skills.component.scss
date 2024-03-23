@@ -1,6 +1,7 @@
 @import './../../styles.scss';
 
 .my-skills-section {
+    position: relative;
     font-family: 'Poppins';
     padding-top: 324px;
     padding-bottom: 160px;
@@ -22,6 +23,7 @@
     justify-content: center;
     gap: 8rem;
     padding-right: 5rem;
+    z-index: 2;
     
 
     div {
@@ -94,6 +96,7 @@
 
 .bg-three {
     position: absolute;
-    top: 240vh;
+    bottom: -500px;
     left: -500px;
+    z-index: 1;
 }

@@ -6,7 +6,7 @@
     padding-left: 100px;
     padding-right: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     color: white;
     background-color: $bg;
@@ -16,7 +16,7 @@
 .about-me-left {
     display: flex;
     flex-direction: column;
-    margin-right: max(10vw, 10%);
+    z-index: 5;
 
     h1 {
         margin-bottom: 2rem;
@@ -41,15 +41,17 @@
 }
 
 .about-me-right {
+    z-index: 5;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: calc(30% - 42px);
     
     &::after {
         position: absolute;
         content: '';
         border-top: 0.3rem solid $aqua_blue;
-        width: 10vw;
+        width: 30%;
         right: 0;
     }
 

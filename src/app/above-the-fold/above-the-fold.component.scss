@@ -1,60 +1,155 @@
 @import './../../styles.scss';
 
 .atf-section {
+    position: relative;
     font-family: 'Poppins';
     padding-top: 124px;
     padding-left: 100px;
     padding-right: 100px;
     background-color: $bg;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 400px;
+
+    div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
 
-//-------------------- left-side-------------------------
+//-------------------- left-side -------------------------
 .atf-section-container-left {
-    .atf-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .atf-img-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+        width: 600px;
 
         .atf-img-colors {
             position: absolute;
-            // z-index: 1;
-            left: -5rem;
+            z-index: 1;
+            left: -160px;
         }
 
         .atf-img-photo {
             position: absolute;
-            // z-index: 2;
-            top: 10rem;
+            z-index: 2;
             width: 550px;
             left: 100px;
-        }
-
-        .atf-img-vector {
-            position: absolute;
-            width: 100vw;
-            // height: 100vh;
             left: 0;
-            top: 30%;
-            // z-index: 3;
         }
-
-        
     }
 
-    .atf-links {
+    .atf-img-vector {
         position: absolute;
-        z-index: 4;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        width: 100vw;
+        // height: 100vh;
         left: 0;
-        margin-top: 68vh;
+        top: 30%;
+        z-index: 3;
+    }
+}
+
+//-------------------- right-side ------------------------
+
+.atf-section-container-right {
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20vh;
+
+    .atf-headlines {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: default;
+
+        .atf-headlines-vertical {
+
+            h2 {
+                writing-mode: vertical-lr;
+                text-orientation: sideways;
+                color: white;
+                transform: rotateZ(180deg);
+                font-size: 4rem;
+                font-weight: 400;
+                margin: 0;
+                margin-top: 1.8rem;
+            }
+        }
+
+        .atf-headlines-horizontal {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: fit-content;
+            width: fit-content;
+
+            .headline-white {
+                margin-bottom: -3rem;
+            }
+
+            .headline-blue {
+                font-size: 4rem;
+                font-weight: 400;
+                color: $purple_blue;
+            }
+        }
+    }
+
+    button {
+        background-color: $aqua_blue;
+        color: white;
+        font-size: 1.5rem;
+        width: 16rem;
+        height: 4rem;
+        border-radius: 5%/20%;
+        border: none;
+        margin-top: 2rem;
+
+        transition: transform 1000ms;
+
+        &:hover {
+            transform: translateY(-1.75rem);
+            transition: transform 250ms;
+            background-color: $purple_blue; // Hier wird die Farbe geändert, wenn über das Element gehovert wird
+        }
+    }
+
+}
+
+//---------------------- bottom --------------------------
+
+.atf-bottom-container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 100px;
+    z-index: 4;
+
+    .atf-links {
+        justify-self: flex-start;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 4rem;
+        gap: 4rem;
+        flex: 1;
 
         &::before {
             position: absolute;
             content: '';
             border-top: 0.3rem solid $purple_blue;
-            width: 4vw;
+            width: 100px;
             left: 0;
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
@@ -68,85 +163,16 @@
         }
 
         a {
-            padding-left: 8vw;
             text-decoration: 0;
             font-size: 1.8rem;
             color: white;
             cursor: pointer;
 
             transition: color 0.5s ease;
-            
+
             &:hover {
                 color: $aqua_blue;
             }
-        }
-    }
-}
-
-//-------------------- right-side-------------------------
-
-.atf-section-container-right {
-    z-index: 4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .atf-headlines {
-        padding-top: 10vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: default;
-    }
-
-    .atf-headlines-vertical {
-
-        h2 {
-            writing-mode: vertical-lr;
-            text-orientation: sideways;
-            color: white;
-            transform: rotateZ(180deg);
-            font-size: 4rem;
-            font-weight: 400;
-            margin: 0;
-            margin-top: 1.8rem;
-        }
-    }
-
-    .atf-headlines-horizontal {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: fit-content;
-        width: fit-content;
-
-        .headline-white {
-            margin-bottom: -3rem;
-        }
-
-        .headline-blue {
-            font-size: 4rem;
-            font-weight: 400;
-            color: $purple_blue;
-        }
-    }
-
-    button {
-        background-color: $aqua_blue;
-        color: white;
-        font-size: 1.5rem;
-        width: 16rem;
-        height: 4rem;
-        border-radius: 5%/20%;
-        border: none;
-        margin-top: 2rem;
-        
-        transition: transform 1000ms;
-
-        &:hover {
-            transform: translateY(-1.75rem);
-            transition: transform 250ms;
-            background-color: $purple_blue; // Hier wird die Farbe geändert, wenn über das Element gehovert wird
         }
     }
 
@@ -154,18 +180,15 @@
         writing-mode: vertical-lr;
         text-orientation: sideways;
         color: white;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 200;
-        margin-left: 50rem;
-        margin-top: 16rem;
         cursor: default;
 
         animation: bounce 0.8s ease-in-out infinite alternate;
     }
-
 }
 
-.bg-two{
+.bg-two {
     position: absolute;
     overflow: hidden;
     z-index: 4;

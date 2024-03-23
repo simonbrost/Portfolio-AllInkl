@@ -1,6 +1,7 @@
 @import './../../styles.scss';
 
 .portfolio-section {
+    position: relative;
     font-family: 'Poppins';
     padding-top: 10rem;
     width: 100vw;
@@ -52,7 +53,7 @@
         position: absolute;
         overflow: hidden;
         z-index: 1;
-        top: 360vh;
+        bottom: -300px;
         right: -500px;
         transform: rotate(70deg);
     }

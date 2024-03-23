@@ -1,6 +1,7 @@
 @import './../../styles.scss';
 
 .contact-section {
+    position: relative;
     font-family: 'Poppins';
     padding-top: 124px;
     padding-left: 100px;
@@ -30,7 +31,7 @@
 
 .contact-section-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 .text-box {
@@ -129,7 +130,7 @@ form {
     position: absolute;
     overflow: hidden;
     left: -280px;
-    top: 480vh;
+    bottom: 0;
     transform: rotate(260deg);
 }
 
