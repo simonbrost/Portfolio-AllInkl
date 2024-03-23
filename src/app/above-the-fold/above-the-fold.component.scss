@@ -50,9 +50,9 @@
     .atf-img-vector {
         position: absolute;
         width: 100vw;
-        // height: 100vh;
+        height: 100vh;
         left: 0;
-        top: 30%;
+        top: 36%;
         z-index: 3;
     }
 }
@@ -129,7 +129,7 @@
 //---------------------- bottom --------------------------
 
 .atf-bottom-container {
-
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
