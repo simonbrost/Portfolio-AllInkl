@@ -37,6 +37,8 @@
                 border-top: 0.3rem solid $purple_blue;
                 width: calc(50vw - 256px);
                 right: 0;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
                 
             }
         }

@@ -17,7 +17,7 @@
         align-items: center;
         text-align: center;
 
-        &::after {
+        &::before {
             position: absolute;
             content: '';
             border-top: 0.3rem solid $purple_blue;
