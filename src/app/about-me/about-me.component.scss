@@ -45,13 +45,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: calc(30% - 42px);
+    margin-right: calc(20% - 60px);
     
     &::after {
         position: absolute;
         content: '';
         border-top: 0.3rem solid $aqua_blue;
-        width: 30%;
+        width: 20%;
         right: 0;
     }
 
