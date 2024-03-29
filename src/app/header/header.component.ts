@@ -10,10 +10,12 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   isMenuOpen: boolean = false;
+  
 
   constructor() { }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+    console.log(this.isMenuOpen);
   }
 }
