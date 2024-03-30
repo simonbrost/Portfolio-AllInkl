@@ -13,8 +13,8 @@
     align-items: center;
     border-top: 0.3rem solid $aqua-blue;
     cursor: default;
-    position: relative; /* Position für Z-Index */
-    z-index: 1; /* Auf oberster Ebene */
+    position: relative;
+    z-index: 1;
 }
 
 .footer-left {
@@ -76,5 +76,20 @@
             cursor: pointer;
             animation: grow 0.2s ease forwards;
         }
+    }
+}
+
+.mobile-footer-impressum {
+    display: none;
+
+    a {
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
     }
 }

@@ -83,12 +83,13 @@
         cursor: default;
 
         .atf-headline-vertical {
+            height: fit-content;
+            width: fit-content;
             writing-mode: vertical-lr;
             text-orientation: sideways;
             color: white;
             transform: rotateZ(180deg);
-            // font-size: 4rem;
-            font-size: clamp(1rem, 1rem + 10vw, 4rem);
+            font-size: clamp(1rem, 7vw, 4rem);
             font-weight: 400;
             margin: 0;
             margin-top: 1.8rem;
@@ -103,14 +104,13 @@
 
             .headline-white {
                 margin-bottom: -3rem;
-                font-size: clamp(2rem, 1rem + 10vw, 7rem);
+                font-size: clamp(2rem, 11.5vw, 7rem);
                 font-weight: 600;
                 color: white;
             }
 
             .headline-blue {
-                // font-size: 4rem;
-                font-size: clamp(2rem, 1rem + 10vw, 4rem);
+                font-size: clamp(2rem, 6.5vw, 4rem);
                 font-weight: 400;
                 color: $purple_blue;
             }
@@ -195,7 +195,8 @@
         font-size: 1.6rem;
         font-weight: 200;
         cursor: default;
-
+        position: relative !important;
+        z-index: 4 !important;
         animation: bounce 0.8s ease-in-out infinite alternate;
     }
 }
@@ -203,7 +204,7 @@
 .bg-two {
     position: absolute;
     overflow: hidden;
-    z-index: 4;
+    z-index: 3;
     top: 75vh;
     right: -400px;
 }

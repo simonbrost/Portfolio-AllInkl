@@ -39,6 +39,10 @@
     flex-direction: column;
     max-width: 650px;
     gap: 1rem;
+
+    h2 {
+        font-size: 2rem;
+    }
 }
 
 .form-box {
