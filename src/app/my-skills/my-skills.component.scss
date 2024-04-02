@@ -15,6 +15,10 @@
     cursor: default;
 }
 
+.mobile-d-none {
+    display: none;
+}
+
 .my-skills-left {
     width: 60vw;
     display: flex;
@@ -39,6 +43,10 @@
             &:hover {
                 transform: rotate(360deg);
             }
+        }
+
+        span {
+            text-align: center;
         }
     }
 
@@ -73,24 +81,24 @@
     div {
         max-width: 600px;
     }
+}
 
-    button {
-        align-self: flex-end;
-        background-color: $aqua_blue;
-        color: white;
-        font-size: 1.5rem;
-        width: 16rem;
-        height: 4rem;
-        border-radius: 5%/20%;
-        border: none;
+.my-skills-btn {
+    align-self: flex-end;
+    background-color: $aqua_blue;
+    color: white;
+    font-size: 1.5rem;
+    width: 16rem;
+    height: 4rem;
+    border-radius: 5%/20%;
+    border: none;
 
-        transition: transform 1000ms;
+    transition: transform 1000ms;
 
-        &:hover {
-            transform: translateY(-1.75rem);
-            transition: transform 250ms;
-            background-color: $purple_blue;
-        }
+    &:hover {
+        transform: translateY(-1.75rem);
+        transition: transform 250ms;
+        background-color: $purple_blue;
     }
 }
 
