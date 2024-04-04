@@ -8,6 +8,7 @@
     background-color: $bg;
     color: white;
     cursor: default;
+    overflow-x: clip;
 
     .headlines-container {
         display: flex;
@@ -53,7 +54,6 @@
 
     .bg-five {
         position: absolute;
-        overflow: hidden;
         z-index: 1;
         bottom: -300px;
         right: -500px;

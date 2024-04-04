@@ -10,6 +10,7 @@
     background-color: $bg;
     color: white;
     cursor: default;
+    overflow-x: clip;
 
     h1 {
         margin-bottom: 5rem;
@@ -110,6 +111,7 @@ form {
   }
 
 .btn {
+    margin-top: 3rem;
     background-color: $aqua_blue;
     border: none;
     font-size: 1.5rem;
@@ -126,13 +128,13 @@ form {
 }
 
 .to-the-top {
+    margin-top: 50px;
     cursor: pointer;
     animation: bounce 0.8s ease-in-out infinite alternate;
 }
 
 .bg-six{
     position: absolute;
-    overflow: hidden;
     left: -280px;
     bottom: 0;
     transform: rotate(260deg);
