@@ -100,15 +100,11 @@
 
     .my-skills-section {
         flex-direction: column-reverse;
-        gap: 5rem;
+        gap: 7rem;
 
         .my-skills-right {
+            align-self: flex-end;
             width: auto;
-            align-items: center !important;
-
-            div {
-                text-align: center;
-            }
         }
 
         .my-skills-left {
@@ -195,6 +191,21 @@
         }
     }
 
+    //-------MY-SKILLS-SECTION-----------
+
+    .my-skills-right {
+        padding-right: 5rem;
+
+        div {
+            max-width: 480px !important;
+        }
+    }
+
+    //-------PROJECT-SECTION-----------
+
+    .info-container {
+        max-width: 60vw !important;
+    }
     //-------CONTACT-SECTION-----------
 
     .contact-section {
@@ -284,6 +295,37 @@
     .my-skills-section {
         padding-top: 124px !important;
     }
+
+    .my-skills-left {
+        width: auto !important;
+        gap: 2rem !important;
+
+        div {
+            flex: 0 0 25% !important;
+            padding-bottom: 32px !important;
+        }
+    }
+
+    //------------PORTFOLIO---------------
+    .headlines-container {
+
+        h1 {
+
+            &::before {
+                width: 2rem !important;
+                margin-right: 60vw !important;
+            }
+
+            &::after {               
+                width: 8rem !important; 
+            }
+        }
+
+        span {
+            text-align: center;
+            max-width: 560px;
+        }
+    }
 }
 
 @media screen and (max-width: 572px) {
@@ -356,9 +398,29 @@
     //----------------SKILLS--------------
     .my-skills-section {
         padding-bottom: 0 !important;
+        gap: 2rem;
 
         .mobile-d-none {
             display: block;
+        }
+
+        .bg-three {
+            bottom: -640px;
+            left: -640px;
+        }
+    }
+
+    .my-skills-right {
+        padding-right: 3rem;
+
+        h1 {
+            &::after {
+                width: 2rem !important;
+            }
+        }
+
+        div {
+            max-width: 360px !important;
         }
     }
 
@@ -380,6 +442,26 @@
         }
     }
 
+    //------------PORTFOLIO---------------
+    .headlines-container {
+
+        h1 {
+
+            &::before {
+                width: 2rem !important;
+                margin-right: 70vw !important;
+            }
+
+            &::after {
+                width: 5rem !important; 
+            }
+        }
+
+        span {
+            max-width: 400px;
+        }
+    }
+
     //----------PROJECT---------------------
     .img-container {
         img {
@@ -389,32 +471,89 @@
     }
 
     .info-container {
+        h2 {
+            font-size: clamp(1rem, 1rem + 5vw, 5rem) !important;
+        }
+
+        h3 {
+            font-size: clamp(0.5rem, 0.5rem + 5vw, 4rem) !important;
+        }
+
         .btn-container {
             gap: 2rem;
         }
     }
+
+    //-------CONTACT-SECTION-----------
+    .contact-section {
+        padding-left: 1rem !important;
+        h1 {
+            align-self: flex-start; //neu
+            position: relative !important;
+            padding-right: 7rem;
+
+            &::before {
+                position: relative !important;
+                margin-right: 1rem;
+                width: 2rem !important;
+            }
+        }
+    }
+
+    .contact-section-container {
+        max-width: 480px;
+    }
 }
 
-// @media screen and (max-width: 400px) {
-    //-----------------------greift nicht!!!!!!---------------
-    // .atf-headline-vertical {
-    //     font-size: 30px !important;
-    // }
+@media screen and (max-width: 400px) {
+//TEILE DIESER QUERY WERDEN NICHT ÜBERNOMMEN!!!!!!!!!!!!!!!!!
+    //---------------ATF--------------------
+    .atf-headline-vertical {
+        font-size: 30px !important;
+    }
 
-    // .atf-headlines-horizontal {
-    //     .headline-white {
-    //         margin-bottom: -16px !important;
-    //         font-size: 50px !important;
-    //     }
+    .atf-headlines-horizontal {
+        .headline-white {
+            margin-bottom: -16px !important;
+            font-size: 50px !important;
+        }
 
-    //     .headline-blue {
-    //         font-size: 26px !important;
-    //     }
-    // }
+        .headline-blue {
+            font-size: 26px !important;
+        }
+    }
 
-//     .atf-links {
-//         &::before {
-//             width: 2rem !important;
-//         }
-//     }
-// }
+    .atf-links {
+        &::before {
+            width: 3rem !important;
+        }
+    }
+
+    //----------------SKILLS--------------
+    .my-skills-section {
+
+        .bg-three {
+            bottom: -640px;
+            left: -720px !important;
+        }
+    }
+
+    //------------PORTFOLIO---------------
+    .headlines-container {
+
+        h1 {
+
+            &::before {
+                margin-right: 75vw !important;
+            }
+
+            &::after {
+                width: 4rem !important; 
+            }
+        }
+
+        span {
+            max-width: 320px;
+        }
+    }
+}

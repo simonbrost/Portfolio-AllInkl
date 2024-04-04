@@ -1,3 +1,7 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'font-styles';
+@import 'responsive-styles';
+
 $bg: #141D2F;
 $purple_blue: #4B47FF;
 $aqua_blue: #00BEE8;
@@ -6,7 +10,7 @@ $error: #E61C40;
 $done: #70E61C;
 
 .section-headline {
-  font-size: 7rem;
+  font-size: clamp(1.5rem, 1rem + 10vw, 7rem);
   font-weight: 600;
   color: white;
 }
@@ -27,46 +31,6 @@ body::-webkit-scrollbar {
 //   -ms-overflow-style: none;  /* IE and Edge */
 //   scrollbar-width: none;  /* Firefox */
 // }
-
-/* poppins-200 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 200;
-  src: url('../src/assets/fonts/poppins-v20-latin/poppins-v20-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
- /* poppins-regular - latin */
- @font-face {
-   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-   font-family: 'Poppins';
-   font-style: normal;
-   font-weight: 400;
-   src: url('../src/assets/fonts/poppins-v20-latin/poppins-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
- }
- /* poppins-600 - latin */
- @font-face {
-   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-   font-family: 'Poppins';
-   font-style: normal;
-   font-weight: 600;
-   src: url('../src/assets/fonts/poppins-v20-latin/poppins-v20-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
- }
- /* poppins-800 - latin */
- @font-face {
-   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-   font-family: 'Poppins';
-   font-style: normal;
-   font-weight: 800;
-   src: url('../src/assets/fonts/poppins-v20-latin/poppins-v20-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
- }
-
-.fontPoppins {
-  font-family: 'Poppins';
-}
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
-
 
 // ----------------- ANIMATIONS & TRANSITIONS ----------------------------
 
