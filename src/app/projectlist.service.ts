@@ -14,7 +14,7 @@ export class ProjectlistService {
       description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
       img: "join.png",
       github: "https://github.com/simonbrost/JOIN",
-      demo: "",
+      demo: "https://simon-brost.developerakademie.net/Join/application.html",
     },
     {
       name: "El Pollo Loco",
