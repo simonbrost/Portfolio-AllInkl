@@ -56,8 +56,6 @@
     span {
         font-size: 1rem;
     }
-
-    ;
 }
 
 .btn-container {
@@ -72,7 +70,7 @@
         border-radius: 10%/20%;
 
         &:hover {
-            background-position: -100% 0; // Verschiebt die Hintergrundfarbe um 100% nach links
+            background-position: -100% 0;
         }
     }
 
@@ -81,8 +79,8 @@
         background-color: $aqua_blue;
         background-image: linear-gradient(to right, $purple_blue 0%, $purple_blue 100%);
         background-repeat: no-repeat;
-        background-size: 200% 100%; // Die Hintergrundfarbe ist anfänglich 200% breit, damit sie den Button vollständig abdeckt
-        transition: background-position 0.5s ease; // Übergangseffekt für die Hintergrundposition
+        background-size: 200% 100%;
+        transition: background-position 0.5s ease;
     }
 
     .btn-aqua {
@@ -90,7 +88,7 @@
         background-color: $aqua_blue;
         background-image: linear-gradient(to right, $bg 0%, $bg 100%);
         background-repeat: no-repeat;
-        background-size: 200% 100%; // Die Hintergrundfarbe ist anfänglich 200% breit, damit sie den Button vollständig abdeckt
-        transition: background-position 0.5s ease; // Übergangseffekt für die Hintergrundposition
+        background-size: 200% 100%;
+        transition: background-position 0.5s ease;
     }
 }
