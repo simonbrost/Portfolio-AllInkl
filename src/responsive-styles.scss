@@ -209,6 +209,7 @@
     .info-container {
         max-width: 60vw !important;
     }
+
     //-------CONTACT-SECTION-----------
 
     .contact-section {
@@ -240,6 +241,7 @@
         .text-box {
             width: auto;
         }
+
         .form-box {
             width: auto;
             max-width: 450px;
@@ -329,8 +331,8 @@
                 margin-right: 60vw !important;
             }
 
-            &::after {               
-                width: 8rem !important; 
+            &::after {
+                width: 8rem !important;
             }
         }
 
@@ -375,17 +377,17 @@
         .atf-section-container-right {
 
             .atf-headline-vertical {
-                font-size: 34px !important;
+                font-size: 30px !important;
             }
 
             .atf-headlines-horizontal {
                 .headline-white {
                     margin-bottom: -16px !important;
-                    font-size: 50px !important;
+                    font-size: 44px !important;
                 }
 
                 .headline-blue {
-                    font-size: 29px !important;
+                    font-size: 25px !important;
                 }
             }
 
@@ -406,6 +408,9 @@
 
         .text-block {
             max-width: 300px !important;
+            gap: 1rem !important;
+            margin: 1rem !important;
+
         }
     }
 
@@ -467,7 +472,7 @@
             }
 
             &::after {
-                width: 5rem !important; 
+                width: 5rem !important;
             }
         }
 
@@ -495,6 +500,10 @@
 
         .btn-container {
             gap: 2rem;
+
+            button {
+                font-size: 18px !important;
+            }
         }
     }
 
@@ -548,7 +557,7 @@
             }
 
             &::after {
-                width: 4rem !important; 
+                width: 4rem !important;
             }
         }
 
