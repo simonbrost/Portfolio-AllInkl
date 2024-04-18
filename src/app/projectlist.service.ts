@@ -30,7 +30,7 @@ export class ProjectlistService {
       description: "My Approach to the famous Pokedex. Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
       img: "pokedex.png",
       github: "https://github.com/simonbrost/angular-pokedex",
-      demo: "",
+      demo: "https://simon-brost.developerakademie.net/pokedex/",
     }
   ]
 }
