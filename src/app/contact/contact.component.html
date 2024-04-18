@@ -9,6 +9,7 @@
             <div>
                 <span>Need a Frontend developer? <b>Contact me!</b></span>
             </div>
+            <div id="successMessage" *ngIf="isFormSubmitted">Success! Thank you, for your message</div>
         </div>
         <div class="form-box">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
@@ -42,16 +43,16 @@
                 <div class="row mb-3">
                     <div class="col-sm-10 offset-sm-2">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck1">
+                            <input class="form-check-input" type="checkbox" id="gridCheck1" [(ngModel)]="isAgreed" name="isAgreed">
                             <label class="form-check-label" for="gridCheck1">
-                                I've read the <a href="">privacy policy</a> and agree to the processing of my data as
+                                I've read the <a href="privacy">privacy policy</a> and agree to the processing of my data as
                                 outlined
                             </label>
                         </div>
                     </div>
                 </div>
                 <div class="msg-btn-container">
-                    <button type="submit" class="btn btn-primary">Send message &#9786;</button>
+                    <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid || !isAgreed">Send message &#9786;</button>
                 </div>
                 <div class="to-the-top-container">
                     <a href="#atf">

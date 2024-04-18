@@ -22,6 +22,8 @@ export class ContactComponent {
 
   borderColorGood = '#4B47FF';
 
+  isAgreed: boolean = false;
+  isFormSubmitted: boolean = false;
   mailTest = true;
 
   post = {
@@ -34,7 +36,7 @@ export class ContactComponent {
       },
     },
   };
-
+form: any;
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
@@ -49,8 +51,11 @@ export class ContactComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+      this.isFormSubmitted = true;
       ngForm.resetForm();
+      setTimeout(() => {
+        this.isFormSubmitted = false;
+      }, 3000);
     }
   }
 }
