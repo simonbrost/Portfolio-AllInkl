@@ -2,57 +2,57 @@
     <h1 class="section-headline">Contact</h1>
     <div class="contact-section-container">
         <div class="text-box">
-            <h2>Got a problem to solve?</h2>
-            <span>Contact me through this form, I am interested in hearing from you,
+            <h2 translate>Got a problem to solve?</h2>
+            <span translate>Contact me through this form, I am interested in hearing from you,
                 knowing your ideas and contributing to your projects with my work.
             </span>
             <div>
-                <span>Need a Frontend developer? <b>Contact me!</b></span>
+                <span translate>Need a Frontend developer? <b translate>Contact me!</b></span>
             </div>
-            <div id="successMessage" *ngIf="isFormSubmitted">Success! Thank you, for your message</div>
+            <div id="successMessage" *ngIf="isFormSubmitted" translate>Success! Thank you, for your message</div>
         </div>
         <div class="form-box">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="row mb-3">
                     <div class="col-sm-10">
                         <input ngClass="{'warningColor': !name.valid && name.touched}" #name="ngModel" minlength="4" [(ngModel)]="contactData.name" type="text" name="name" 
-                        class="form-control" id="inputName3" placeholder="Your name" required >
+                        class="form-control" id="inputName3" [placeholder]="'Your name' | translate" required >
                         @if (!name.valid && name.touched) {
-                            <span class="notification">Your name is required</span>
+                            <span class="notification" translate>Your name is required</span>
                         }
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-sm-10">
                         <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" 
-                        class="form-control" id="inputEmail3" placeholder="Your email" 
+                        class="form-control" id="inputEmail3" [placeholder]="'Your email' | translate" 
                         required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                         @if (!email.valid && email.touched) {
-                            <span class="notification">Your email is required</span>
+                            <span class="notification" translate>Your email is required</span>
                         }
                     </div>
                 </div>
                 <div class="mb-3">
                     <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" 
                     class="form-control" id="exampleFormControlTextarea1" rows="5"
-                    placeholder="Your message" required></textarea>
+                    [placeholder]="'Your message' | translate" required></textarea>
                     @if (!message.valid && message.touched && !message.disabled) {
-                        <span class="notification">Your message is empty</span>
+                        <span class="notification" translate>Your message is empty</span>
                     }
                 </div>
                 <div class="row mb-3">
                     <div class="col-sm-10 offset-sm-2">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="gridCheck1" [(ngModel)]="isAgreed" name="isAgreed">
-                            <label class="form-check-label" for="gridCheck1">
-                                I've read the <a href="privacy">privacy policy</a> and agree to the processing of my data as
+                            <label class="form-check-label" for="gridCheck1" translate>
+                                I've read the <a href="privacy" translate>privacy policy</a> and agree to the processing of my data as
                                 outlined
                             </label>
                         </div>
                     </div>
                 </div>
                 <div class="msg-btn-container">
-                    <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid || !isAgreed">Send message &#9786;</button>
+                    <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid || !isAgreed" translate>Send message</button>
                 </div>
                 <div class="to-the-top-container">
                     <a href="#atf">

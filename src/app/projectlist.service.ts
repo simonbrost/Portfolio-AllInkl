@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { TranslateService } from "@ngx-translate/core";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectlistService {
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 
   projectlist = [
     {
@@ -32,5 +33,11 @@ export class ProjectlistService {
       github: "https://github.com/simonbrost/angular-pokedex",
       demo: "https://simon-brost.developerakademie.net/pokedex/",
     }
-  ]
+  ];
+
+  translateDescriptions() {
+    this.projectlist.forEach(project => {
+      project.description = this.translate.instant(project.description);
+    });
+  }
 }
