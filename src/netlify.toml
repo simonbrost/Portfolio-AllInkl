@@ -5,5 +5,5 @@ publish = "dist/browser"
 
 [[redirects]]
 from = “/*”
-to = “/index.html”
+to = “/imprint”
 status = 200
