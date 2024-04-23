@@ -4,6 +4,7 @@ command = “npm run build:prod”
 publish = "dist/browser"
 
 [[redirects]]
-from = “/*”
+from = “/”
 to = “/imprint”
-status = 200
+status = 301
+force = false
