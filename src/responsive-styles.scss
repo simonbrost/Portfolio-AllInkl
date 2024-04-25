@@ -158,14 +158,18 @@
     }
 }
 
-@media screen and (max-width: 980px) {
-    #desktop-header {
-        display: none;
-    }
+@media screen and (max-width: 1100px) {
+    
+#desktop-header {
+    display: none;
+}
 
-    #mobile-header {
-        display: flex !important;
-    }
+#mobile-header {
+    display: flex !important;
+}
+}
+
+@media screen and (max-width: 980px) {
 
     section {
         padding-left: 0 !important;

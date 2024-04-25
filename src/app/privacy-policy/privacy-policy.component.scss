@@ -1,0 +1,46 @@
+@import './../../styles.scss';
+
+.privacy-section {
+    height: fit-content;
+    background-color: $bg;
+    padding-top: 124px;
+    color: white;
+    font-size: 1.1rem;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            font-size: 2rem;
+            color: $aqua_blue;
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: $purple_blue;
+        }
+        h3 {
+            font-size: 1.5rem;
+            text-decoration: underline;
+        }
+        h4 {
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .privacy-section div {
+        padding-left: 100px !important;
+        padding-right: 100px !important;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .privacy-section div {
+        font-size: 1rem;
+        padding: 20px !important;
+    }
+}
