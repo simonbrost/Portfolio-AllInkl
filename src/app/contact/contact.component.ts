@@ -28,7 +28,7 @@ export class ContactComponent {
   mailTest = true;
 
   post = {
-    endPoint: 'http://simonbrost.com/sendMail.php',
+    endPoint: 'https://simonbrost.netlify.app//sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
