@@ -13,50 +13,50 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ContactComponent {
 
-  http = inject(HttpClient);
+//   http = inject(HttpClient);
 
-  contactData = {
-    name: "",
-    email: "",
-    message: "",
-  }
+//   contactData = {
+//     name: "",
+//     email: "",
+//     message: "",
+//   }
 
-  borderColorGood = '#4B47FF';
+//   borderColorGood = '#4B47FF';
 
-  isAgreed: boolean = false;
-  isFormSubmitted: boolean = false;
-  mailTest = true;
+//   isAgreed: boolean = false;
+//   isFormSubmitted: boolean = false;
+//   mailTest = true;
 
-  post = {
-    endPoint: 'https://simonbrost.netlify.app//sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
-    options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
-    },
-  };
-form: any;
-  onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
+//   post = {
+//     endPoint: 'https://simonbrost.netlify.app//sendMail.php',
+//     body: (payload: any) => JSON.stringify(payload),
+//     options: {
+//       headers: {
+//         'Content-Type': 'text/plain',
+//         responseType: 'text',
+//       },
+//     },
+//   };
+// form: any;
+//   onSubmit(ngForm: NgForm) {
+//     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+//       this.http.post(this.post.endPoint, this.post.body(this.contactData))
+//         .subscribe({
+//           next: (response) => {
 
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      this.isFormSubmitted = true;
-      ngForm.resetForm();
-      setTimeout(() => {
-        this.isFormSubmitted = false;
-      }, 3000);
-    }
-  }
+//             ngForm.resetForm();
+//           },
+//           error: (error) => {
+//             console.error(error);
+//           },
+//           complete: () => console.info('send post complete'),
+//         });
+//     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+//       this.isFormSubmitted = true;
+//       ngForm.resetForm();
+//       setTimeout(() => {
+//         this.isFormSubmitted = false;
+//       }, 3000);
+//     }
+//   }
 }
