@@ -28,7 +28,7 @@ export class ContactComponent {
   mailTest = true;
 
   post = {
-    endPoint: 'https://simonbrost.netlify.app//sendMail.php',
+    endPoint: 'https://simonbrost.netlify.app',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -38,25 +38,22 @@ export class ContactComponent {
     },
   };
 form: any;
-  onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      this.isFormSubmitted = true;
-      ngForm.resetForm();
-      setTimeout(() => {
-        this.isFormSubmitted = false;
-      }, 3000);
-    }
+onSubmit(contactForm: NgForm) {
+  if (contactForm.valid) {
+    this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      .subscribe({
+        next: (response) => {
+          contactForm.resetForm();
+          this.isFormSubmitted = true;
+          setTimeout(() => {
+            this.isFormSubmitted = false;
+          }, 3000);
+        },
+        error: (error) => {
+          console.error(error);
+        },
+        complete: () => console.info('send post complete'),
+      });
   }
+}
 }
