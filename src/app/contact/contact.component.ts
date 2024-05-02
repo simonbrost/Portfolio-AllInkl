@@ -28,7 +28,11 @@ export class ContactComponent {
 
   onSubmit(contactForm: NgForm) {
     if (contactForm.valid) {
+      contactForm.resetForm();
       this.isFormSubmitted = true;
+      setTimeout(() => {
+        this.isFormSubmitted = false;
+      }, 3000);
     }
   }
 }

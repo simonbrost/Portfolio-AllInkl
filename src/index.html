@@ -39,6 +39,14 @@
 
   <app-root></app-root>
 
+      <!-- Hidden form used for Netlify Forms to pick it up -->
+      <form name="contact" method="POST" netlify hidden>
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" id="inputName3" name="name" />
+        <input type="hidden" id="inputEmail3" name="email" />
+        <textarea type="hidden" id="exampleFormControlTextarea1" name="message"></textarea>
+      </form>
+
 </body>
 </html>
 
