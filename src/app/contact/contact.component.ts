@@ -25,7 +25,6 @@ export class ContactComponent {
 
   isAgreed: boolean = false;
   isFormSubmitted: boolean = false;
-  mailTest = true;
 
   post = {
     endPoint: 'https://simonbrost.netlify.app',
