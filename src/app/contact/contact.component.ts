@@ -26,33 +26,9 @@ export class ContactComponent {
   isAgreed: boolean = false;
   isFormSubmitted: boolean = false;
 
-  post = {
-    endPoint: 'https://simonbrost.netlify.app',
-    body: (payload: any) => JSON.stringify(payload),
-    options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
-    },
-  };
-form: any;
-onSubmit(contactForm: NgForm) {
-  if (contactForm.valid) {
-    this.http.post(this.post.endPoint, this.post.body(this.contactData))
-      .subscribe({
-        next: (response) => {
-          contactForm.resetForm();
-          this.isFormSubmitted = true;
-          setTimeout(() => {
-            this.isFormSubmitted = false;
-          }, 3000);
-        },
-        error: (error) => {
-          console.error(error);
-        },
-        complete: () => console.info('send post complete'),
-      });
+  onSubmit(contactForm: NgForm) {
+    if (contactForm.valid) {
+      this.isFormSubmitted = true;
+    }
   }
-}
 }
